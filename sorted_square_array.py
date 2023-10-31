@@ -8,10 +8,7 @@ def sortedSquaredArray(array):
         if abs(array[left_pointer]) >= abs(array[right_pointer]):
             result.insert(0, abs(array[left_pointer]) * abs(array[left_pointer]))
             left_pointer += 1
-        if abs(array[right_pointer]) > abs(array[left_pointer]):
+        else:
             result.insert(0, abs(array[right_pointer]) * abs(array[right_pointer]))
             right_pointer -= 1
     return result
-
-
-print(sortedSquaredArray([-4, -2, 1, 3]))
